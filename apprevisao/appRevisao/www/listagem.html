@@ -1,1 +1,37 @@
-<button class="button" name="sair" ng-click="sair()">SAIR</button>
+<div class="bar bar-header">
+  <h1 class="title">
+    APP REVISÃO
+  </h1>
+  <button class="button" name="sair" ng-click="sair()">
+    SAIR
+  </button>
+</div>
+
+<div class="list has-header">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">
+      Lembrete
+    </span>
+    <input type="text" placeholder="Lembrete" ng-model="lembrete.descricao">
+  </label>
+
+  <div class="item item-button">
+    <button class="button button-positive button-block" name="salvar" ng-click="salvar(lembrete)" ng-disabled="!lembrete.descricao">
+      SALVAR
+    </button>
+  </div>
+</div>
+
+<div class="list has-header">
+  <div class="item item-button-right" ng-repeat="item in listagem">
+    <h2>{{item.descricao}}</h2>
+    <div class="buttons">
+      <button class="button button-positive" ng-click="editar(item, $index)">
+        <i class="icon ion-edit"></i>
+      </button>
+      <button class="button button-assertive" ng-click="excluir($index)">
+        <i class="icon ion-trash-a"></i>
+      </button>
+    </div>
+  </div>
+</div>

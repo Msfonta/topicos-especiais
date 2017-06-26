@@ -30,6 +30,30 @@ app.controller('listagemController', function($scope, $ionicPlatform, $state){
     $scope.lembrete = {};
     $scope.listagem = [];
 
+
+    $scope.listar = function(){
+      return $scope.listagem;
+    }
+
+    $scope.listar();
+
+    $scope.salvar = function(lembrete) {
+      $scope.listagem.push(angular.copy(lembrete));
+      $scope.lembrete = null;
+      $scope.listar();
+    }
+
+    $scope.excluir = function(index) {
+      $scope.listagem.splice(index, 1);
+      $scope.listar();
+    }
+
+    $scope.editar = function(lembrete, index) {
+      $scope.lembrete = lembrete;
+      $scope.excluir(index);
+      $scope.listar();
+    }
+
     $scope.sair = function() {
       $state.go("login");
     }
