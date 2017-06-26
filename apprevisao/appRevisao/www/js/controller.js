@@ -1,7 +1,8 @@
 app.controller('appController', function($scope, $ionicPlatform){
   $ionicPlatform.ready(function() {
 
-    //seu código aqui
+    $scope.listagem = [];
+    $scope.usuario = {};
 
   });
 });
@@ -20,7 +21,6 @@ app.controller('loginController', function($scope, $ionicPlatform, $state){
       }
       $scope.usuario = null;
     }
-
   });
 });
 
@@ -28,8 +28,6 @@ app.controller('listagemController', function($scope, $ionicPlatform, $state){
   $ionicPlatform.ready(function() {
 
     $scope.lembrete = {};
-    $scope.listagem = [];
-
 
     $scope.listar = function(){
       return $scope.listagem;

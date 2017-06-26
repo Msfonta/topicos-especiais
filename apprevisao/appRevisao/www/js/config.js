@@ -18,8 +18,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 
     $urlRouterProvider
-      .otherwise('login')
-      .otherwise('listagem');
+      .otherwise('listagem')
+      .otherwise('login');
 
 
 })
