@@ -1,0 +1,14 @@
+<div class="list">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="Email@dominio.com" ng-model="usuario.email">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Senha</span>
+    <input type="password" placeholder="Senha" ng-model="usuario.senha">
+  </label>
+
+  <div class="item item-button">
+    <button class="button button-positive button-block" name="button" ng-click="entrar(usuario)" ng-disabled="!usuario.email || !usuario.senha">ENTRAR</button>
+  </div>
+</div>
